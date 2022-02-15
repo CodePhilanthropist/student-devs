@@ -2,6 +2,7 @@
 @import "../css/variables";
 @import "../css/utilities";
 @import "../css/mixins";
+@import "../css/slider";
 
 //========================= Hero Area ==================
 .hero {
@@ -9,8 +10,6 @@
   background: $prime-skin;
   width: 100%;
   height: 100vh;
-  // background: url('../images/hero-bg-md.svg');
-  // background-size: cover;
   header {
     width: 100%;
     z-index: 999;
@@ -113,42 +112,53 @@
     place-items: center;
     width: 87%;
     margin: 0 auto;
-    section:first-child {
+    // overflow: hidden;
+    // height: 100vh;
+
+    .slideshow-container {
       display: grid;
       grid-gap: 1rem;
-      h1 {
-        font-size: 2.5rem;
-      }
-      p {
-        font-size: 1.09rem;
-      }
-      a {
-        border: 1px solid $title-skin;
-        background: none;
-        &:hover {
-          background: $title-skin;
+      .dots{
+        position: relative;
+        top: 5rem;
+    }
+      .mySlides { 
+        h1 {
+          font-size: 2.5rem;
         }
-      }
-      .tongkoy {
+        p {
+          font-size: 1.09rem;
+        }
         a {
-          border: none !important;
+          border: 1px solid $title-skin;
           background: none;
-          i {
-            background: #ecf6fe;
-            padding: 0.5rem;
-            font-size: 1.5rem;
-            border-radius: 50%;
-            color: $prime-skin;
-            margin-bottom: 2rem;
-            &:hover {
-              background: $nav-hover-skin;
-              color: #ecf6fe;
+          &:hover {
+            background: $title-skin;
+          }
+        }
+        .tongkoy {
+          a {
+            border: none !important;
+            background: none;
+            i {
+              background: #ecf6fe;
+              padding: 0.5rem;
+              font-size: 1.5rem;
+              border-radius: 50%;
+              color: $prime-skin;
+              margin-bottom: 2rem;
+              &:hover {
+                background: $nav-hover-skin;
+                color: #ecf6fe;
+              }
             }
           }
         }
       }
+     
     }
-    section:nth-child(2) {
+
+    section {
       display: none;
     }
   }

@@ -1,4 +1,7 @@
 @media screen and (min-width: 600px) {
+  .hero .hero-container .slideshow-container .dots {
+    top: 0 !important;
+  }
   .features section:nth-child(2) {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -33,10 +36,10 @@
   .modal-header {
     display: none !important;
   }
-  .hero-container section:first-child h1 {
+  .hero-container section h1 {
     font-size: 3.3rem;
   }
-  .hero-container section:first-child p {
+  .hero-container section p {
     font-size: 2rem;
   }
   .team section:nth-child(2) {
@@ -59,10 +62,10 @@
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
   }
-  .hero-container section:first-child h1 {
+  .hero-container .slideshow-container h1 {
     font-size: 3.5rem !important;
   }
-  .hero-container section:first-child p {
+  .hero-container .slideshow-container p {
     font-size: 2rem;
   }
   .features section:nth-child(2) {
@@ -452,6 +455,87 @@ textarea:focus {
   color: blue !important;
 }
 
+.no-drop {
+  cursor: no-drop;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #FF5F7E;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,35 +669,40 @@ textarea:focus {
   margin: 0 auto;
 }
 
-.hero .hero-container section:first-child {
+.hero .hero-container .slideshow-container {
   display: -ms-grid;
   display: grid;
   grid-gap: 1rem;
 }
 
-.hero .hero-container section:first-child h1 {
+.hero .hero-container .slideshow-container .dots {
+  position: relative;
+  top: 5rem;
+}
+
+.hero .hero-container .slideshow-container .mySlides h1 {
   font-size: 2.5rem;
 }
 
-.hero .hero-container section:first-child p {
+.hero .hero-container .slideshow-container .mySlides p {
   font-size: 1.09rem;
 }
 
-.hero .hero-container section:first-child a {
+.hero .hero-container .slideshow-container .mySlides a {
   border: 1px solid #fff;
   background: none;
 }
 
-.hero .hero-container section:first-child a:hover {
+.hero .hero-container .slideshow-container .mySlides a:hover {
   background: #fff;
 }
 
-.hero .hero-container section:first-child .tongkoy a {
+.hero .hero-container .slideshow-container .mySlides .tongkoy a {
   border: none !important;
   background: none;
 }
 
-.hero .hero-container section:first-child .tongkoy a i {
+.hero .hero-container .slideshow-container .mySlides .tongkoy a i {
   background: #ecf6fe;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -622,12 +711,12 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
-.hero .hero-container section:first-child .tongkoy a i:hover {
+.hero .hero-container .slideshow-container .mySlides .tongkoy a i:hover {
   background: #FF5F7E;
   color: #ecf6fe;
 }
 
-.hero .hero-container section:nth-child(2) {
+.hero .hero-container section {
   display: none;
 }
 
