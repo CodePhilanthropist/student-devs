@@ -31,7 +31,7 @@ https://github.com/CodePhilanthropist/student-devs
 ![Blog](https://i.imgur.com/yavQKvl.png)
 ### Blog Page
 
-![Contact](https://i.imgur.com/0solVzl.png)
+![Contact](https://i.imgur.com/UYLA6tF.png)
 ### Contact Page
 
 
